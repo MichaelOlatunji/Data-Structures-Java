@@ -93,6 +93,7 @@ public class BinarySearchTree {
         return this.remove(this.root, data);
     }
 
+    // finds successor (least element in right of the root)
     public BSTNode findMinimum(BSTNode node){
         if(node.left != null){
             return findMinimum(node.left);
@@ -100,6 +101,7 @@ public class BinarySearchTree {
         return node;
     }
 
+    // finds predecessor (highest element in left of the root)
     public BSTNode findMaximum(BSTNode node){
         if(node.right != null){
             return findMaximum(node.right);
@@ -107,12 +109,14 @@ public class BinarySearchTree {
         return node;
     }
 
-    // 1. if right subtree is not null, successor will be the leftmost
-    // child of the right subtree or the right child itself
+    /*
+    1. if right subtree is not null, successor will be the leftmost
+       child of the right subtree or the right child itself
 
-    // 2. If key is smaller than root node;
-    // a) Set the successor as root
-    // b) search recursively into the left subtree;
+    2. If key is smaller than root node:
+        a) Set the successor as root
+        b) search recursively into the left subtree
+    */
 
     public BSTNode findSuccessor(BSTNode root, BSTNode succ, int key){
         if(root == null){
@@ -136,18 +140,19 @@ public class BinarySearchTree {
     }
 
 
-    // 1. If the left subtree is not null, the rightmost child of the
-    // left subtree is the predecessor or the left child itself
+    /*
+    1. If the left subtree is not null, the rightmost child of the
+       left subtree is the predecessor or the left child itself
 
-    // 2. If key is greater than the root node;
-    // a) set the predecessor as root
-    // b) search recursively to the right subtree
+    2. If key is greater than the root node:
+        a) set the predecessor as root
+        b) search recursively to the right subtree
+    */
 
     public BSTNode findPredecessor(BSTNode root, BSTNode pred, int key){
         if(root == null){
             return null;
         }
-
         if(key == root.data){
             if(root.left != null){
                 return findMaximum(root.left);
