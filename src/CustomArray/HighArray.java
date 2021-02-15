@@ -1,8 +1,12 @@
 package CustomArray;
 
 public class HighArray {
-    private long[] arr;
-    private int nItems;
+    protected long[] arr;
+    protected int nItems;
+
+    public HighArray(){
+        arr = new long[16];
+    }
 
     public HighArray(int max){
         arr = new long[max];
@@ -10,6 +14,7 @@ public class HighArray {
     }
 
     public boolean find(long item){
+        // TODO: Implement a Binary Search for this method
         for(int i = 0; i < this.nItems; i++){
             if(arr[i] == item){
                 return true;

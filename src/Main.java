@@ -1,4 +1,5 @@
 import CustomArray.HighArray;
+import CustomArray.OrderedArray;
 
 import java.time.LocalDate;
 
@@ -6,7 +7,7 @@ public class Main {
     public static void main(String args[]){
 
         int max = 100;
-        HighArray arr = new HighArray(max);
+        OrderedArray arr = new OrderedArray(max);
         arr.insert(77); // insert 10 items
         arr.insert(99);
         arr.insert(44);
@@ -19,7 +20,7 @@ public class Main {
         arr.insert(33);
         arr.display();
 
-        int searchKey = 35;
+        int searchKey = 55;
         if( arr.find(searchKey)) System.out.println("Found " + searchKey);
         else System.out.println("Can’t find " + searchKey);
         arr.delete(00);
