@@ -6,6 +6,8 @@ public class OrderedArray extends HighArray{
         super(max);
     }
 
+    // TODO: Implement a Binary Search for find method
+
     @Override
     public void insert(long item){
         int i;
@@ -17,21 +19,6 @@ public class OrderedArray extends HighArray{
         }
         this.arr[i] = item;
         nItems++;
-    }
-
-    @Override
-    public boolean delete(long item){
-        int index;
-        if(this.findIndex(item) >= 0){
-            index = this.findIndex(item);
-            for(int j = index; j < this.nItems; j++){
-                arr[j] = arr[j + 1];
-            }
-            nItems--;
-            return true;
-        } else{
-            return false;
-        }
     }
 
 }

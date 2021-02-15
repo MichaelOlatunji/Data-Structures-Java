@@ -14,7 +14,6 @@ public class HighArray {
     }
 
     public boolean find(long item){
-        // TODO: Implement a Binary Search for this method
         for(int i = 0; i < this.nItems; i++){
             if(arr[i] == item){
                 return true;
@@ -44,7 +43,9 @@ public class HighArray {
         int index;
         if(this.findIndex(item) >= 0){
             index = this.findIndex(item);
-            arr[index] = arr[index + 1];
+            for(int j = index; j < this.nItems; j++){
+                arr[j] = arr[j + 1];
+            }
             nItems--;
             return true;
         } else{
