@@ -2,11 +2,13 @@ package CustomArray;
 
 public class OrderedArray extends HighArray{
 
+    public OrderedArray(){
+        super();
+    }
+
     public OrderedArray(int max){
         super(max);
     }
-
-    // TODO: Implement a Binary Search for find method
 
     @Override
     public boolean find(long key){
@@ -57,5 +59,4 @@ public class OrderedArray extends HighArray{
         this.arr[i] = item;
         nItems++;
     }
-
 }
