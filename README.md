@@ -1,2 +1,7 @@
-# Data-Structures-Java
-Learning and exploring purposes, data structures codes in java
+# This repository contains some of the most popular data structures implemented in Java
+
+So far it contains:
+ 
+- LinkedList
+- Array
+- Binary Search Tree
