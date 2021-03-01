@@ -3,8 +3,8 @@
 So far it contains:
  
 - LinkedList
- - SinglyLinkedList
+     - SinglyLinkedList
 - Array
-  - High Array
-  - Ordered Array
+     - High Array
+     - Ordered Array
 - Binary Search Tree
