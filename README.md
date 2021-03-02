@@ -7,4 +7,6 @@ So far it contains:
 - Array
      - High Array
      - Ordered Array
-- Binary Search Tree
+- Trees
+     - Binary Search Tree
+     - AVL Tree
